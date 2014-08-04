@@ -34,3 +34,22 @@ Run syncdb and migrate command
 
     python manage.py syncdb
     python manage.py migrate
+
+
+*******
+Usage
+*******
+
+
+Example of getting all social links for 'user'
+
+.. code-block::  python
+
+    {% load sociallink_tags %}
+
+    {% obj_social_links user as user_links %}
+    {% for link in user_links %}
+        <a href="{{ link.link }}" class="{{ link.link_type.css_class }}">
+            {{ link.link_type.name }}
+        </a>
+    {% endfor %}

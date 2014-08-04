@@ -22,6 +22,7 @@ class SocialLinkInline(admin.TabularInline):
 
 
 class SocialLinkGroupAdmin(admin.ModelAdmin):
+    list_display = ('name', 'slug')
     inlines = (SocialLinkInline,)
 
 

@@ -28,6 +28,7 @@ class SocialLinkGroup(models.Model):
     assing social link to it"""
 
     name = models.CharField(_('Name'), max_length=50)
+    slug = models.SlugField(_('Slug'), max_length=50, unique=True)
 
     class Meta:
         verbose_name = _('Link Group')
