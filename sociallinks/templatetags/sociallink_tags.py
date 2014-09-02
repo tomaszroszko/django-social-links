@@ -35,5 +35,3 @@ def group_social_links(slug):
     group = SocialLinkGroup.objects.get(slug=slug)
     return SocialLink.objects.filter(
         link_group=group).select_related('link_type')
-
-
