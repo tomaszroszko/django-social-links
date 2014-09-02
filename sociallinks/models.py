@@ -50,7 +50,7 @@ class SocialLink(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, blank=True)
     object_pk = models.IntegerField(_('Object pk'), null=True, blank=True)
     link = models.URLField(_('Link'))
-    priority = models.PositiveSmallIntegerField(_('Social Link'), default=0)
+    priority = models.PositiveSmallIntegerField(_('Priority'), default=0)
 
     class Meta:
         verbose_name = _('Social Link')
